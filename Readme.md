@@ -1,6 +1,9 @@
 # Home Task
 
-1) array.forEach : MDN
+1) study about array.forEach loop on MDN website ( https://developer.mozilla.org )
+
+# Class Notes 
+---------------------------------------------------------
 
 # for in and for of loop
 <!-- <!DOCTYPE html>
