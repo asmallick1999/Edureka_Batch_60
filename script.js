@@ -67,3 +67,12 @@
 //      } 
 // }
 
+// const family_member = [[4, 3, 3, 4, 9], [5, 6, 3, 1, 7]]
+
+// for (let i in family_member) {
+   
+//    for(let j in family_member){
+//       console.log("*");
+//    }
+//    console.log("\n");
+// }
