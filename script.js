@@ -34,38 +34,36 @@
 //        }
 
 
-function validate(){
-    console.log("validate function is invoked!!")
-    var name=document.forms['myForm']['name'].value;
-     if(name=='')
-     {
-       document.getElementById("error").innerHTML="Name cant be empty"
-     }
+// function validate(){
+//     console.log("validate function is invoked!!")
+//     var name=document.forms['myForm']['name'].value;
+//      if(name=='')
+//      {
+//        document.getElementById("error").innerHTML="Name cant be empty"
+//      }
 
-     var phone=document.forms['myForm']['phone'].value;
-     console.log(phone)
-     console.log(typeof phone)
-     var no=parseInt(phone)
-     console.log(typeof no)
-     if(isNaN(no)){
-        document.getElementById("error").innerHTML="phone no  should be a no"
-     }
-
-
-     var dob=document.forms['myForm']['dob'].value
-     var date=new Date(dob)
-     console.log(date)
-
-     var today=new Date();
-
-     var diff=today-date  //result in milliseconds 
-
-     var age=diff/(1000*3600*24*365.25)
-
-     if(age<18){
-        alert("you are too small to submit the form!!")
-     }
+//      var phone=document.forms['myForm']['phone'].value;
+//      console.log(phone)
+//      console.log(typeof phone)
+//      var no=parseInt(phone)
+//      console.log(typeof no)
+//      if(isNaN(no)){
+//         document.getElementById("error").innerHTML="phone no  should be a no"
+//      }
 
 
-   
-}
+//      var dob=document.forms['myForm']['dob'].value
+//      var date=new Date(dob)
+//      console.log(date)
+
+//      var today=new Date();
+
+//      var diff=today-date  //result in milliseconds 
+
+//      var age=diff/(1000*3600*24*365.25)
+
+//      if(age<18){
+//         alert("you are too small to submit the form!!")
+//      } 
+// }
+
