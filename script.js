@@ -76,3 +76,37 @@
 //    }
 //    console.log("\n");
 // }
+
+const family_member = [4, 3, 3, 4, 9]
+// const arr = {
+//    name : "sohail",
+//    roll : 203003,
+//    university : "aliah university",
+// }
+// for(k in arr){
+//    console.log(k+" :"+arr[k]);
+// }
+// for(let value of family_member){
+//    console.log(value);
+// }
+
+// for(index in arr){
+//    console.log(arr[index]);
+// }
+
+// for(let a of family_member){
+//    console.log(family_member[a]);
+// }
+
+// var arr = [3, 5, 7];
+// arr.foo = "hello";
+
+    
+// for (var i in arr) {
+//   console.log(i); // logs "0", "1", "2", "foo"
+// }
+    
+// for (var i of arr) {
+//   console.log(i); // logs "3", "5", "7"
+//   // it doesn't log "3", "5", "7", "hello"
+// }
