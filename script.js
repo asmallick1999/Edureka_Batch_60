@@ -77,7 +77,8 @@
 //    console.log("\n");
 // }
 
-const family_member = [4, 3, 3, 4, 9]
+//const family_member = [4, 3, 3, 4, 9]
+
 // const arr = {
 //    name : "sohail",
 //    roll : 203003,
@@ -110,3 +111,40 @@ const family_member = [4, 3, 3, 4, 9]
 //   console.log(i); // logs "3", "5", "7"
 //   // it doesn't log "3", "5", "7", "hello"
 // }
+
+// let c = function abc(){
+//     console.log("Hello I am inside a function");
+// }
+
+
+//############### Generator Function ####################
+
+// function* generatorFunction(){
+//     let i =0,k=2;
+//     for(i;i<5;i++){
+//         yield i;
+//         k = k+1;
+//         yield k;
+//     }
+// }
+// const returnValue = generatorFunction();
+
+// for(let i = 0; i<5;i++){
+//     console.log(returnValue.next().value);
+// }
+
+//############## Class and Object ##########################
+
+class practiceClass {
+    constructor(type, sub){
+        this.firstType = type;
+        this.firstSub = sub;
+    }
+}
+
+const obj1 = new practiceClass("Array","Java")
+console.log(obj1.firstSub);
+console.log(obj1.firstType);
+
+
+
