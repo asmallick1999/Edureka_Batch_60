@@ -237,4 +237,41 @@
 
 //##################### SetTime & SetInterval #####################
 
+const emp = [
+    {   
+        name:"sohail",  
+        age:50
+    },
+    {   
+        name:"kaju",  
+        age:80    
+    },
+    {   
+        name:"gauree",  
+        age:25     
+    },
+    {   
+        name:"jay",  
+        age:30    
+    },
+    {   
+        name:"rahul",  
+        age:55    
+    },
+]
 
+// const matchingAgeCount = emp.reduce(function(acc, curr){
+//     if(acc[curr.age]){
+//         acc[curr.age] = ++age[curr.age]
+//     }
+//     else{
+//         acc[curr.age] = 1;
+//     }
+//     return acc[curr.age]
+    
+// },{})
+
+const above30 = emp.filter(val=>val.age>30)
+for(let index of above30){
+    console.log(index.name);
+}
