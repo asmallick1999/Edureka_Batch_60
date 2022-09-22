@@ -135,16 +135,93 @@
 
 //############## Class and Object ##########################
 
-class practiceClass {
-    constructor(type, sub){
-        this.firstType = type;
-        this.firstSub = sub;
+// class practiceClass {
+//     constructor(type, sub){
+//         this.firstType = type;
+//         this.firstSub = sub;
+//     }
+// }
+
+// obj1 = new practiceClass("Array","Java")
+// console.log(obj1.firstSub);
+// console.log(obj1.firstType);
+
+
+//################ Cookies #####################
+
+// document.cookie = "userID = asm; password = sohail1999@"
+
+// let ck1 = document.cookie;
+// console.log(ck1);
+
+//############# Destructuring  ##################
+
+// const person={
+//     name:"Sohail",
+//     roll:203003,
+//     hobbies:["batminton","cricket","football","hockey"],
+//     address:{
+//         Vill:"madhabpur",
+//         PO:"jamalpur",
+//         PIN:712402
+//     }
+// }
+
+// let{name,roll,hobbies,address}=person
+// console.log(roll);
+
+//############ Constractor ##############
+
+// function Myconstructor(name, roll){
+//     this.myName = name;
+//     this.myRoll = roll;
+// }
+// let{name,roll}=Myconstructor
+// const myConstructor = new Myconstructor("sohail",203003)
+// console.log(myName);
+
+//############# back tick ##############
+
+// const myName = "sohail"
+
+// console.log(`hello everyone
+// How are you bro
+// keise hoo saab log
+// this is ${2+5}`);     
+
+
+//############## arrow function #################
+
+// const ages = [60,9,8,50,45,3]
+// let agesAbove18=ages.map(above18 => above18%2)
+// console.log(agesAbove18);
+
+//########## immidiate invoked function ##############
+
+// (function(a){ 
+//      var checkVar = 90
+// })(30);
+// console.log(checkVar);
+
+
+
+//################ var, let, const ################
+
+// var s = 40;
+// var s = 50;
+// console.log(s);
+
+//################ this keyword ####################
+
+// (function hello(){
+//     "use strict"
+//     console.log(this);
+// })();
+
+//############### cookie ################
+
+(
+    function cookieCheck(){
+        document.cookie("id:asmallick99;pwd=12345@")
     }
-}
-
-const obj1 = new practiceClass("Array","Java")
-console.log(obj1.firstSub);
-console.log(obj1.firstType);
-
-
-
+)
