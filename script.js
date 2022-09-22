@@ -70,7 +70,7 @@
 // const family_member = [[4, 3, 3, 4, 9], [5, 6, 3, 1, 7]]
 
 // for (let i in family_member) {
-   
+
 //    for(let j in family_member){
 //       console.log("*");
 //    }
@@ -102,11 +102,11 @@
 // var arr = [3, 5, 7];
 // arr.foo = "hello";
 
-    
+
 // for (var i in arr) {
 //   console.log(i); // logs "0", "1", "2", "foo"
 // }
-    
+
 // for (var i of arr) {
 //   console.log(i); // logs "3", "5", "7"
 //   // it doesn't log "3", "5", "7", "hello"
@@ -220,8 +220,21 @@
 
 //############### cookie ################
 
-(
-    function cookieCheck(){
-        document.cookie("id:asmallick99;pwd=12345@")
-    }
-)
+
+// function cookieCheck() {
+//     document.cookie = "pwd=12345@"
+//     const showCookie = document.cookie.split(';')
+//     console.log(showCookie);
+
+// }
+// cookieCheck();
+
+//############### Local Storage #####################
+
+// localStorage.setItem("college","aliah")
+
+// sessionStorage.setItem
+
+//##################### SetTime & SetInterval #####################
+
+
