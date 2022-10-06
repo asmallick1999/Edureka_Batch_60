@@ -1,5 +1,8 @@
 // var a = [50,60,40,20,10]
 
+// const { rejects } = require("assert");
+// const { resolve } = require("path");
+
 // for(index in a){
 //     console.log(a[index]);
 // }
@@ -237,41 +240,204 @@
 
 //##################### SetTime & SetInterval #####################
 
-const emp = [
-    {   
-        name:"sohail",  
-        age:50
-    },
-    {   
-        name:"kaju",  
-        age:80    
-    },
-    {   
-        name:"gauree",  
-        age:25     
-    },
-    {   
-        name:"jay",  
-        age:30    
-    },
-    {   
-        name:"rahul",  
-        age:55    
-    },
-]
+// const emp = [
+//     {   
+//         name:"sohail",  
+//         age:50
+//     },
+//     {   
+//         name:"kaju",  
+//         age:50    
+//     },
+//     {   
+//         name:"gauree",  
+//         age:25     
+//     },
+//     {   
+//         name:"jay",  
+//         age:25    
+//     },
+//     {   
+//         name:"rahul",  
+//         age:55    
+//     },
+// ]
+
+
+
 
 // const matchingAgeCount = emp.reduce(function(acc, curr){
+
+//     //console.log(acc[curr], curr);
 //     if(acc[curr.age]){
-//         acc[curr.age] = ++age[curr.age]
+//         acc[curr.age] = ++acc[curr.age]
 //     }
 //     else{
 //         acc[curr.age] = 1;
 //     }
-//     return acc[curr.age]
-    
-// },{})
+//     return acc
 
-const above30 = emp.filter(val=>val.age>30)
-for(let index of above30){
-    console.log(index.name);
+// },{})
+// console.log(matchingAgeCount);
+// console.log();
+
+//###############################################################
+
+// const above30 = emp.filter(val=>val.age>30)
+// for(let index of above30){
+//     console.log(index.name);
+// }
+
+//###################### Set Time Out ###############################
+
+// console.log("hello");
+
+// function exam(cb){
+//     setTimeout(()=>{
+//         console.log("writing on exam")
+//         cb();
+//     }, 100);
+
+
+// }
+// const examFinish = ()=>{
+//     console.log("Exam Done");
+// }
+// exam(examFinish);
+
+
+// ################ Promises ########################
+
+
+// let p1 = new Promise((resolve, reject) => {
+//     const a = 21;
+//     if (a == 20) {
+//         resolve(`everything is working fine`);
+//     }
+//     else {
+//         reject(`something went wrong ${a}`);
+//     }
+// })
+
+
+// async function exam(){
+//     try{
+//         await p1;
+//     }
+//     catch(error){
+//         console.error(`this is an error`, error);
+//     }
+//     finally{
+//         console.log(`i will execute`);
+//     }
+// }
+// exam();
+// console.log(`hello this is after promise`);
+
+
+// ############################# API ############################
+
+//1
+
+// function getApiCall(){
+//     fetch('https://jsonplaceholder.typicode.com/users',{method:'GET'})
+//     .then(responce=>responce.json())
+//     .then(data=>console.log(data))
+// }
+// getApiCall();
+//2
+
+// function getApiCall(){
+//     fetch('https://randomuser.me/api/',{method:'GET'})
+//     .then(Response=>Response.json())
+//     .then(data=>console.log(data.results[0].name.first))
+//     .catch("server has a problem")
+// }
+
+
+// ################### Asychronous #######################
+
+// console.log("i am writing exam");
+
+// function examDone(){
+//     setTimeout(()=>console.log("exam is done"), 3000)
+// }
+// examDone();
+
+// console.log("let me go to home");
+// console.log("let me go to home");
+// console.log("let me go to home");
+// console.log("let me go to home");
+// console.log("let me go to home");
+// console.log("let me go to home");
+// console.log("let me go to home");
+
+
+// ################## API ########################
+//const url = 'https://api.nasa.gov/planetary/apod?api_key=EGMHCZ3kXaNy2jjRo1dzILcR0VT7iYaLB2jBXJvx'
+
+
+// (function () {
+//     let jsonData = [];
+//     fetch('https://dummyjson.com/users')
+//         .then(Response => Response.json())
+//         .then(data => {
+//             jsonData = data;
+//             console.log(jsonData.users[0].firstName);
+//             for (let i = 0; i < jsonData.users.length; i++) {
+//                 createElement(i)
+//                 createImg(i)
+//             }
+//         })
+//     function createElement(i) {
+//         let h2 = document.createElement("h2");
+//         h2.innerHTML = `${jsonData.users[i].firstName}  ${jsonData.users[i].lastName} ${i}`;
+//         document.getElementById('parentH2').appendChild(h2);
+
+//         console.log(`hi`);
+//     }
+//     function createImg(i) {
+//         let img = document.createElement("img");
+//         img.src = `${jsonData.users[i].image}`;
+//         document.getElementById('parentImg').appendChild(img)
+//     }
+// })();
+
+
+(function(){
+    let result = []
+    fetch('https://randomuser.me/api/')
+    .then(Response=>Response.json())
+    .then(data=>{
+        result=data;
+        showData(result);
+    })
+    .catch(`Server is not responding`)
+ 
+})();
+function showData(result){
+
+    // profile picture 
+
+    let img = document.createElement('img');
+    img.src = result.results[0].picture.large;
+    document.getElementById('random').appendChild(img)
+
+    // name 
+
+    let name = document.createElement('p');
+    name.innerHTML = ` Name : ${result.results[0].name.first} ${result.results[0].name.last}`;
+    document.getElementById('random').appendChild(name)
+
+    // gender 
+
+    let gender = document.createElement('p')
+    gender.innerHTML = `Gender : ${result.results[0].gender}`
+    document.getElementById('random').appendChild(gender)
+
 }
+
+
+
+
+
