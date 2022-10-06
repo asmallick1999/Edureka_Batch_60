@@ -404,39 +404,92 @@
 // })();
 
 
+// (function(){
+//     let result = []
+//     fetch('https://randomuser.me/api/')
+//     .then(Response=>Response.json())
+//     .then(data=>{
+//         result=data;
+//         showData(result);
+//     })
+//     .catch(`Server is not responding`)
+
+// })();
+// function showData(result){
+
+//     // profile picture 
+
+//     let img = document.createElement('img');
+//     img.src = result.results[0].picture.medium;
+//     document.getElementById('random').appendChild(img)
+
+//     // name 
+
+//     let name = document.createElement('h4');
+//     name.innerHTML = ` Name : ${result.results[0].name.first} ${result.results[0].name.last}`;
+//     document.getElementById('random').appendChild(name)
+
+//     // gender 
+
+//     let gender = document.createElement('p')
+//     gender.innerHTML = `Gender : ${result.results[0].gender}`
+//     document.getElementById('random').appendChild(gender)
+
+//     // email 
+
+//     let email = document.createElement('p')
+//     email.innerHTML = `email : ${result.results[0].email}`
+//     document.getElementById('random').appendChild(email)
+
+// }
+
+
+// API Practice #############
+
+// (function () {
+//     let result = [];
+//     fetch('https://api.nationalize.io/?name=nathaniel')
+//         .then(Response => Response.json())
+//         .then(data => {
+//             result = data;
+//             console.log(result.country[0].country_id);
+//             apiCall(result);
+//         })
+//         .catch(`server is not responding`)
+// })();
+// function apiCall(result) {
+//     for (value of result.country) {
+
+//         let cId = document.createElement('h4')
+//         document.getElementById('main').appendChild(cId)
+//         cId.innerHTML = value.country_id;
+
+//         // cId.setAttribute('class','cuntryName');
+        
+//     }
+//     for(let i = 0; i<result.country.length;i++){
+//         document.getElementsByTagName('h4')[i].style.color = "white";
+//     } 
+// }
+
+
+// ########## Todo Using API ############
+
 (function(){
-    let result = []
-    fetch('https://randomuser.me/api/')
-    .then(Response=>Response.json())
+    let result = [];
+    fetch('https://jsonplaceholder.typicode.com/todos')
+    .then(Response=> Response.json())
     .then(data=>{
-        result=data;
-        showData(result);
+        result = data;
+        console.log(result);
+        apiCall(result);
     })
-    .catch(`Server is not responding`)
- 
 })();
-function showData(result){
-
-    // profile picture 
-
-    let img = document.createElement('img');
-    img.src = result.results[0].picture.large;
-    document.getElementById('random').appendChild(img)
-
-    // name 
-
-    let name = document.createElement('p');
-    name.innerHTML = ` Name : ${result.results[0].name.first} ${result.results[0].name.last}`;
-    document.getElementById('random').appendChild(name)
-
-    // gender 
-
-    let gender = document.createElement('p')
-    gender.innerHTML = `Gender : ${result.results[0].gender}`
-    document.getElementById('random').appendChild(gender)
-
+function apiCall(result){
+    let title = document.createElement('h5');
+    title.innerHTML = result[0].title;
+    document.getElementById('main').appendChild(title);
 }
-
 
 
 
