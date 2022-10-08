@@ -465,7 +465,7 @@
 //         cId.innerHTML = value.country_id;
 
 //         // cId.setAttribute('class','cuntryName');
-        
+
 //     }
 //     for(let i = 0; i<result.country.length;i++){
 //         document.getElementsByTagName('h4')[i].style.color = "white";
@@ -475,22 +475,43 @@
 
 // ########## Todo Using API ############
 
-(function(){
-    let result = [];
-    fetch('https://jsonplaceholder.typicode.com/todos')
-    .then(Response=> Response.json())
-    .then(data=>{
-        result = data;
-        console.log(result);
-        apiCall(result);
-    })
-})();
-function apiCall(result){
-    let title = document.createElement('h5');
-    title.innerHTML = result[0].title;
-    document.getElementById('main').appendChild(title);
-}
+// (function () {
+//     let result = [];
+//     fetch('https://jsonplaceholder.typicode.com/todos')
+//         .then(Response => Response.json())
+//         .then(data => {
+//             result = data;
+//             console.log(result);
+//             apiCall(result);
+//         })
+// })();
+// function apiCall(result) {
+//     let title;
+//     let filterResult = result.filter(val=>val.completed==true)
+//     for(index of filterResult){
 
+//         title = document.createElement('h5');
+//         title.innerHTML = index.title;
+//         document.getElementById('main').appendChild(title);
+
+//         completed = document.createElement('p');
+//         completed.innerHTML = index.completed;
+//         document.getElementById('main').appendChild(completed)
+//     }
+
+
+
+
+// }
+
+// ############### Node JS #######################
+
+const os = require('os')
+
+console.log(os);
+console.log(os.platform());
+console.log(os.cpus());
+console.log(os.release());
 
 
 
